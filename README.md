@@ -8,6 +8,8 @@
 
 ## Quick Start⚡
 
+You can simply fork this [sandbox](https://codesandbox.io/p/github/giridhar7632/ecommerce-cms-starter/main) and start editing in [codesandbox](https://codesandbox.io/).
+
 ```
 yarn create next-app my-ecommerce-cms -e https://github.com/giridhar7632/ecommerce-cms-starter
 # or
