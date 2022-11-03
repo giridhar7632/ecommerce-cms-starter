@@ -3,9 +3,8 @@ import Layout from '../../components/layout'
 import ProductLayout from '../../components/Product/ProductLayout'
 import DeleteProduct from '../../components/Product/DeleteProduct'
 import UpdateProduct from '../../components/Product/UpdateProduct'
-import data from '../../utils/products.json'
 
-const Product = ({ product }) => {
+function Product({ product }) {
   return (
     <div>
       <header className="my-3 flex flex-col items-center justify-between rounded-md md:flex-row">
@@ -38,18 +37,13 @@ Product.getLayout = function getLayout(page) {
 }
 
 export async function getStaticProps({ params }) {
-  const product = data.PRODUCTS.filter((i) => i.id == params.id)[0]
   return {
-    props: {
-      product,
-    },
+    props: {},
   }
 }
 
 export async function getStaticPaths() {
-  const paths = data.PRODUCTS.map((p) => ({
-    params: { id: `${p.id}` },
-  }))
+  const paths = []
   return {
     paths,
     fallback: true,

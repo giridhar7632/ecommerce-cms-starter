@@ -7,6 +7,7 @@ import AddProduct from '../components/Product/AddProduct'
 
 function Products() {
   const [loading, setLoading] = useState(false)
+  const [products, setProducts] = useState([])
 
   return (
     <div>
@@ -17,7 +18,11 @@ function Products() {
         </div>
       </header>
       <ProductHeader />
-      {loading ? <ProductItemsSkeleton /> : <ProductItems />}
+      {loading ? (
+        <ProductItemsSkeleton />
+      ) : (
+        <ProductItems products={products} />
+      )}
     </div>
   )
 }
