@@ -21,7 +21,7 @@ const ProductLayout = ({ product }) => {
           <p className="text-md max-w-md">{product.description}</p>
         </Section>
         <Section title={'Price'}>
-          <p className="text-md max-w-md">{product.price}</p>
+          <p className="text-md max-w-md">{product.price} $</p>
           <p className="text-xs">for one product</p>
         </Section>
         <Section title={'In Stock'}>
