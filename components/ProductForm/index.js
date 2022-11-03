@@ -71,6 +71,7 @@ const ProductForm = ({ type, defaultValues, onFormSubmit, ...props }) => {
                   value: true,
                   message: 'You must add the price of your product.',
                 },
+                setValueAs: (v) => parseFloat(v),
               })}
             />
             <Input
@@ -86,6 +87,7 @@ const ProductForm = ({ type, defaultValues, onFormSubmit, ...props }) => {
                   value: true,
                   message: 'You must add the price of your product.',
                 },
+                setValueAs: (v) => parseInt(v),
               })}
             />
           </div>
