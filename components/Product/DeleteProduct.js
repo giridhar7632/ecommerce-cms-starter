@@ -2,10 +2,12 @@ import { Dialog, Transition } from '@headlessui/react'
 import React, { Fragment, useState } from 'react'
 import Button from '../common/Button'
 
-const DeleteProduct = () => {
+const DeleteProduct = ({ productId }) => {
   const [isOpen, setIsOpen] = useState(false)
   const handleClose = () => setIsOpen(false)
   const handleOpen = () => setIsOpen(true)
+  const handleDelete = async () => console.log(productId)
+
   return (
     <>
       <Button onClick={handleOpen} variant="text" type="button">
@@ -57,7 +59,7 @@ const DeleteProduct = () => {
                     >
                       Cancel
                     </Button>
-                    <Button className="flex-1" onClick={handleClose}>
+                    <Button className="flex-1" onClick={handleDelete}>
                       Delete
                     </Button>
                   </div>

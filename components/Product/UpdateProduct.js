@@ -9,7 +9,7 @@ const UpdateProduct = ({ product, ...props }) => {
   const handleClose = () => setIsOpen(false)
   const handleOpen = () => setIsOpen(true)
 
-  const onFormSubmit = (data) => {
+  const onFormSubmit = async (data) => {
     console.log(data)
     handleClose()
   }

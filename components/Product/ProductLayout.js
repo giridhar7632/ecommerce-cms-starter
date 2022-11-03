@@ -50,7 +50,7 @@ const ProductLayout = ({ product }) => {
           )}
         </Section>
         <Section title={'Media'}>
-          {product.media.length ? (
+          {product.media?.length ? (
             <div className="grid grid-cols-1 lg:grid-cols-2">
               {product.media?.map((i, idx) => (
                 <Link href={i} key={idx}>
