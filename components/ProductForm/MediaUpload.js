@@ -16,7 +16,7 @@ const MediaUpload = ({ defaultValues = [], setValue }) => {
   }
 
   return (
-    <div>
+    <form>
       <label htmlFor="media" className="mb-1 block text-sm text-gray-600">
         Upload multiple files
       </label>
@@ -50,7 +50,7 @@ const MediaUpload = ({ defaultValues = [], setValue }) => {
           </Button>
         ) : null}
       </div>
-    </div>
+    </form>
   )
 }
 

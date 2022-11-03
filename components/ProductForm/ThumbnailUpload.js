@@ -7,16 +7,17 @@ const ThumbnailUpload = ({ defaultValue, setValue }) => {
   const [uploadData, setUploadData] = useState()
   const handleOnChange = (changeEvent) => {
     const reader = new FileReader()
-
     reader.onload = function (onLoadEvent) {
       setImageSrc(onLoadEvent.target.result)
       setUploadData(undefined)
     }
-
     reader.readAsDataURL(changeEvent.target.files[0])
   }
+
+  const handleUpload = (e) => {}
+
   return (
-    <div>
+    <form onSubmit={() => console.log('submited')}>
       <input
         type="file"
         onChange={handleOnChange}
@@ -26,6 +27,7 @@ const ThumbnailUpload = ({ defaultValue, setValue }) => {
         <img className="mb-2 aspect-video rounded" src={imageSrc} alt="" />
         {imageSrc && !uploadData && (
           <Button
+            type="submit"
             variant="text"
             className="w-full"
             loading={loading}
@@ -35,7 +37,7 @@ const ThumbnailUpload = ({ defaultValue, setValue }) => {
           </Button>
         )}
       </div>
-    </div>
+    </form>
   )
 }
 
