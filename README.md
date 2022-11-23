@@ -5,7 +5,7 @@
 🔦 The starter code for building CMS for a ecommerce website using Xata and Cloudinary.
 
 - ✨ [Final code](https://github.com/giridhar7632/jamstackhack-22)
-<!-- - 📝 [Link to Article]() -->
+- 📝 [Link to Article](https://dev.to/hackmamba/how-to-build-a-full-stack-content-management-system-using-nextjs-xata-and-cloudinary-iaa)
 
 ## Quick Start⚡
 
